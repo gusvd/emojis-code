@@ -36,3 +36,5 @@ search.addWidgets([
 ]);
 
 search.start();
+
+// and yet another test
