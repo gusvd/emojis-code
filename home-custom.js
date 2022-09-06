@@ -36,5 +36,3 @@ search.addWidgets([
 ]);
 
 search.start();
-
-// test test test
