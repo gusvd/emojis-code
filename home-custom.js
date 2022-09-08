@@ -72,3 +72,8 @@ clipboard.on('error', function(e) {
     console.error('Action:', e.action);
     console.error('Trigger:', e.trigger);
 });
+
+////////////////////////////////////////////////
+// Reload webflow interactions
+////////////////////////////////////////////////
+Webflow.require('ix2').init()
