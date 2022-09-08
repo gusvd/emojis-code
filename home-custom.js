@@ -76,4 +76,7 @@ clipboard.on('error', function(e) {
 ////////////////////////////////////////////////
 // Reload webflow interactions
 ////////////////////////////////////////////////
-Webflow.require('ix2').init()
+
+search.on('render', () => {
+  Webflow.require('ix2').init();
+});
