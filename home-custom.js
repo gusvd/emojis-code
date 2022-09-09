@@ -59,9 +59,9 @@ const searchAnimals = instantsearch({
   },
 });
 searchAnimals.addWidgets([
-  instantsearch.widgets.configure({
-    hitsPerPage: 48
-  }),
+  // instantsearch.widgets.configure({
+  //   hitsPerPage: 48
+  // }),
 	instantsearch.widgets.hits({
    container: '#animals',
    cssClasses: {
