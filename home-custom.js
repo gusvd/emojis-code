@@ -54,8 +54,8 @@ const searchAnimals = instantsearch({
   indexName: 'emojisandsymbols',
   searchClient,
   searchParameters: {
-    //query: 'lenovo',
-    filters: 'group.lvl0:Animals & Nature',
+    query: 'animals',
+    //filters: 'group.lvl0:Animals & Nature',
   },
 });
 searchAnimals.addWidgets([
