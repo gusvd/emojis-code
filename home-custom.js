@@ -51,10 +51,10 @@ search.start();
 ////////////////////////////////////////////////
 
 const searchAnimals = instantsearch({
-  indexName: 'weheartemojis',
+  indexName: 'emojisandsymbols',
   searchClient,
   searchParameters: {
-    similarQuery: 'animals',
+    Query: 'animals',
   },
 });
 searchAnimals.addWidgets([
