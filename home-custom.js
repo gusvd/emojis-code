@@ -52,14 +52,14 @@ search.start();
 // Algolia categories query
 ////////////////////////////////////////////////
 
-const search = instantsearch({
+const searchAnimals = instantsearch({
   indexName: 'weheartemojis',
   searchClient,
   searchParameters: {
   },
 });
 
-search.addWidgets([
+searchAnimals.addWidgets([
  instantsearch.widgets.configure({
     hitsPerPage: 48,
     filters: '(group:Animals & Nature'
@@ -86,7 +86,7 @@ search.addWidgets([
   })
 ]);
 
-search.start();
+searchAnimals.start();
 
 
 ////////////////////////////////////////////////
