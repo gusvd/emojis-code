@@ -21,6 +21,7 @@ search.addWidgets([
     placeholder: 'Search emojis, symbols, occasions, emotions...',
     autofocus: true,
     showSubmit: false,
+    showReset: false,
     cssClasses: {
     	input: 'search-input',
     }
@@ -44,7 +45,27 @@ search.addWidgets([
      {{ symbol }}
      </a>`
     }
-  })
+  }),
+  instantsearch.widgets.hits({
+    container: '.animals',
+    cssClasses: {
+     root: 'results-wrapper',
+     list: 'emoji-wrapper',
+     item: 'emoji',
+    },
+    templates: {
+      item: `
+      <a
+      href="#"
+      class="emoji-link"
+      style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+      ">
+      {{ symbol }}
+      </a>`
+     }
+   })
 ]);
 
 search.start();
