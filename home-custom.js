@@ -54,13 +54,14 @@ const searchAnimals = instantsearch({
   indexName: 'emojisandsymbols',
   searchClient,
   searchParameters: {
-    query: 'lenovo',
-    //filters: 'brand:Samsung OR brand:Apple',
+    //query: 'lenovo',
+    filters: 'group.lvl0:Animals & Nature',
   },
 });
-
-
 searchAnimals.addWidgets([
+  instantsearch.widgets.configure({
+    hitsPerPage: 48
+  }),
 	instantsearch.widgets.hits({
    container: '#animals',
    cssClasses: {
