@@ -27,7 +27,7 @@ search.addWidgets([
     }
 	}),
 	instantsearch.widgets.hits({
-   container: '#results-container',
+   container: '#categories-wrapper',
    cssClasses: {
     root: 'results-wrapper',
     list: 'emoji-wrapper',
@@ -46,7 +46,7 @@ search.addWidgets([
      </a>`
     }
   }),
-  instantsearch.widgets.hits({
+/*   instantsearch.widgets.hits({
     container: '#categories-wrapper',
     cssClasses: {
      root: 'results-wrapper',
@@ -65,7 +65,7 @@ search.addWidgets([
       {{ symbol }}
       </a>`
      }
-   })
+   }) */
 ]);
 
 search.start();
