@@ -6,8 +6,6 @@ const searchClient = algoliasearch('OCUTWK8OFD', '721e9f1972bc892174d0794ddc9a30
 const search = instantsearch({
   indexName: 'weheartemojis',
   searchClient,
-  searchParameters: {
-  },
 });
 
 search.addWidgets([
@@ -56,13 +54,13 @@ const searchAnimals = instantsearch({
   indexName: 'weheartemojis',
   searchClient,
   searchParameters: {
+    query: 'lenovo'
   },
 });
 
 searchAnimals.addWidgets([
  instantsearch.widgets.configure({
     hitsPerPage: 48,
-    filters: '(group:Animals & Nature'
   }),
 	instantsearch.widgets.hits({
    container: '#animals',
