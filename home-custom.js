@@ -54,14 +54,13 @@ const searchAnimals = instantsearch({
   indexName: 'weheartemojis',
   searchClient,
   searchParameters: {
-    query: 'lenovo'
+    query: 'lenovo',
+    //filters: 'brand:Samsung OR brand:Apple',
   },
 });
 
+
 searchAnimals.addWidgets([
- instantsearch.widgets.configure({
-    hitsPerPage: 48,
-  }),
 	instantsearch.widgets.hits({
    container: '#animals',
    cssClasses: {
