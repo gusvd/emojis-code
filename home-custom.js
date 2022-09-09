@@ -55,7 +55,6 @@ const searchAnimals = instantsearch({
   searchClient,
   searchParameters: {
     query: 'animals',
-    //filters: 'group.lvl0:Animals & Nature',
   },
 });
 searchAnimals.addWidgets([
