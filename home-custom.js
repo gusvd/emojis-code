@@ -38,7 +38,7 @@ search.addWidgets([
          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
        transform-style: preserve-3d;
      ">
-     {{ symbol }}
+     {{ name }}
      </a>`
     }
   })
