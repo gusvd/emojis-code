@@ -48,6 +48,46 @@ search.addWidgets([
 
 search.start();
 
+////////////////////////////////////////////////
+// Algolia categories query
+////////////////////////////////////////////////
+
+const search = instantsearch({
+  indexName: 'weheartemojis',
+  searchClient,
+  searchParameters: {
+  },
+});
+
+search.addWidgets([
+ instantsearch.widgets.configure({
+    hitsPerPage: 48,
+    filters: '(group:Animals & Nature'
+  }),
+	instantsearch.widgets.hits({
+   container: '#animals',
+   cssClasses: {
+    root: 'results-wrapper',
+    list: 'emoji-wrapper',
+    item: 'emoji',
+   },
+   templates: {
+     item: `
+     <a
+     href="#"
+     class="emoji-link"
+     style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+         rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+       transform-style: preserve-3d;
+     ">
+     {{ symbol }}
+     </a>`
+    }
+  })
+]);
+
+search.start();
+
 
 ////////////////////////////////////////////////
 // clipboard.js
