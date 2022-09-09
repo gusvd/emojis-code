@@ -47,7 +47,7 @@ search.addWidgets([
     }
   }),
   instantsearch.widgets.hits({
-    container: '.animals',
+    container: '#categories-wrapper',
     cssClasses: {
      root: 'results-wrapper',
      list: 'emoji-wrapper',
