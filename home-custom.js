@@ -23,7 +23,7 @@ search.addWidgets([
     }
 	}),
 	instantsearch.widgets.hits({
-   container: '#results-container',
+   container: '#search-results',
    cssClasses: {
     root: 'results-wrapper',
     list: 'emoji-wrapper',
