@@ -51,7 +51,7 @@ search.start();
 ////////////////////////////////////////////////
 
 const searchAnimals = instantsearch({
-  indexName: 'weheartsemoji',
+  indexName: 'weheartsemojis',
   searchClient,
   searchParameters: {
     similarQuery: 'animals',
