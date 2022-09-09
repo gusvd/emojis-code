@@ -77,7 +77,7 @@ searchAnimals.addWidgets([
          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
        transform-style: preserve-3d;
      ">
-     {{ name }}
+     {{ symbol }}
      </a>`
     }
   })
@@ -90,29 +90,29 @@ searchAnimals.start();
 // clipboard.js
 ////////////////////////////////////////////////
 
-var clipboard = new ClipboardJS('.emoji-link', {
-    target: function(trigger) {
-        return trigger;
-    }
-});
+// var clipboard = new ClipboardJS('.emoji-link', {
+//     target: function(trigger) {
+//         return trigger;
+//     }
+// });
   
-  clipboard.on('success', function(e) {
-    console.info('Action:', e.action);
-    console.info('Text:', e.text);
-    console.info('Trigger:', e.trigger);
+//   clipboard.on('success', function(e) {
+//     console.info('Action:', e.action);
+//     console.info('Text:', e.text);
+//     console.info('Trigger:', e.trigger);
 
-    e.clearSelection();
-});
+//     e.clearSelection();
+// });
 
-clipboard.on('error', function(e) {
-    console.error('Action:', e.action);
-    console.error('Trigger:', e.trigger);
-});
+// clipboard.on('error', function(e) {
+//     console.error('Action:', e.action);
+//     console.error('Trigger:', e.trigger);
+// });
 
-////////////////////////////////////////////////
-// Reload webflow interactions
-////////////////////////////////////////////////
+// ////////////////////////////////////////////////
+// // Reload webflow interactions
+// ////////////////////////////////////////////////
 
-search.on('render', () => {
-  Webflow.require('ix2').init();
-});
+// search.on('render', () => {
+//   Webflow.require('ix2').init();
+// });
