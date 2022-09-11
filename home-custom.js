@@ -6,6 +6,9 @@ const searchClient = algoliasearch('OCUTWK8OFD', '721e9f1972bc892174d0794ddc9a30
 const search = instantsearch({
   indexName: 'emojisandsymbols',
   searchClient,
+  searchParameters: {
+    Query: 'hands',
+  },
 });
 
 search.addWidgets([
