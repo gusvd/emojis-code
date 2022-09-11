@@ -53,40 +53,40 @@ search.start();
 // Algolia categories query
 ////////////////////////////////////////////////
 
-const searchAnimals = instantsearch({
-  indexName: 'emojisandsymbols',
-  searchClient,
-  searchParameters: {
-    Query: 'animals',
-  },
-});
-searchAnimals.addWidgets([
-  // instantsearch.widgets.configure({
-  //   hitsPerPage: 48
-  // }),
-	instantsearch.widgets.hits({
-   container: '#animals',
-   cssClasses: {
-    root: 'results-wrapper',
-    list: 'emoji-wrapper',
-    item: 'emoji',
-   },
-   templates: {
-     item: `
-     <a
-     href="#"
-     class="emoji-link"
-     style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-         rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-       transform-style: preserve-3d;
-     ">
-     {{ symbol }}
-     </a>`
-    }
-  })
-]);
+// const searchAnimals = instantsearch({
+//   indexName: 'emojisandsymbols',
+//   searchClient,
+//   searchParameters: {
+//     Query: 'animals',
+//   },
+// });
+// searchAnimals.addWidgets([
+//   // instantsearch.widgets.configure({
+//   //   hitsPerPage: 48
+//   // }),
+// 	instantsearch.widgets.hits({
+//    container: '#animals',
+//    cssClasses: {
+//     root: 'results-wrapper',
+//     list: 'emoji-wrapper',
+//     item: 'emoji',
+//    },
+//    templates: {
+//      item: `
+//      <a
+//      href="#"
+//      class="emoji-link"
+//      style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+//          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+//        transform-style: preserve-3d;
+//      ">
+//      {{ symbol }}
+//      </a>`
+//     }
+//   })
+// ]);
 
-searchAnimals.start();
+// searchAnimals.start();
 
 
 ////////////////////////////////////////////////
