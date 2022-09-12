@@ -10,7 +10,7 @@ const search = instantsearch({
   indexName: 'emojisandsymbols',
   searchClient,
   searchParameters: {
-    Query: 'hands',
+    Query: 'hearts',
   },
 });
 
