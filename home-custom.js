@@ -9,9 +9,9 @@ const searchClient = algoliasearch(
 const search = instantsearch({
   indexName: 'emojis',
   searchClient,
-  // searchParameters: {
-  //   Query: 'hearts', //custom search
-  // },
+  searchParameters: {
+    Query: 'hearts', //custom search
+  },
 });
 
 search.addWidgets([
