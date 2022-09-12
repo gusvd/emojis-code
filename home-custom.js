@@ -13,7 +13,7 @@ const search = instantsearch({
     //filters: 'brand:Samsung OR brand:Apple',
   },
 });
-search.addWidget(
+search.addWidget([
   instantsearch.widgets.searchBox({
     container: '#input-container',
     placeholder: 'Search emojis, symbols, occasions, emotions...',
@@ -44,7 +44,7 @@ search.addWidget(
       </a>`
      }
   })
-);
+]);
 
 search.start();
 
