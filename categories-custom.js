@@ -10,7 +10,6 @@ const search = instantsearch({
     Query: 'hands',
   },
 });
-
 search.addWidgets([
  instantsearch.widgets.configure({
     hitsPerPage: 96 // INCREASE TO 320
