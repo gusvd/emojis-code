@@ -5,6 +5,7 @@ const searchClient = algoliasearch(
   'OCUTWK8OFD',
   '721e9f1972bc892174d0794ddc9a306d'
 );
+
 const search = instantsearch({
   indexName: 'emojisandsymbols',
   searchClient,
