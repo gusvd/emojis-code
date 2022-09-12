@@ -14,6 +14,16 @@ const search = instantsearch({
   },
 });
 search.addWidget(
+  instantsearch.widgets.searchBox({
+    container: '#input-container',
+    placeholder: 'Search emojis, symbols, occasions, emotions...',
+    autofocus: true,
+    showSubmit: false,
+    showReset: false,
+    cssClasses: {
+    	input: 'search-input',
+    }
+	}),
   instantsearch.widgets.hits({
     container: '#search-results',
     cssClasses: {
