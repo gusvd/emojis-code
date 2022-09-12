@@ -13,26 +13,27 @@ const search = instantsearch({
     //filters: 'brand:Samsung OR brand:Apple',
   },
 });
-instantsearch.widgets.hits({
-  container: '#search-results',
-  cssClasses: {
-   root: 'results-wrapper',
-   list: 'emoji-wrapper',
-   item: 'emoji',
-  },
-  templates: {
-    item: `
-    <a
-    href="#"
-    class="emoji-link"
-    style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-      transform-style: preserve-3d;
-    ">
-    {{ symbol }}
-    </a>`
-   }
- })
+search.addWidget(
+  instantsearch.widgets.hits({
+    container: '#search-results',
+    cssClasses: {
+     root: 'results-wrapper',
+     list: 'emoji-wrapper',
+     item: 'emoji',
+    },
+    templates: {
+      item: `
+      <a
+      href="#"
+      class="emoji-link"
+      style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+      ">
+      {{ symbol }}
+      </a>`
+     }
+  })
 );
 
 search.start();
