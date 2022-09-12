@@ -10,7 +10,7 @@ const search = instantsearch({
   indexName: 'emojis',
   searchClient,
   searchParameters: {
-    Query: 'hearts',
+    Query: 'hearts', //custom search
   },
 });
 
