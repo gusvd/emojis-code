@@ -9,9 +9,9 @@ const searchClient = algoliasearch(
 const search = instantsearch({
   indexName: 'emojis',
   searchClient,
-  searchParameters: {
-    Query: 'hearts',
-  },
+  // searchParameters: {
+  //   Query: 'hearts',
+  // },
 });
 
 search.addWidgets([
@@ -79,6 +79,6 @@ clipboard.on("error", function (e) {
 // Reload webflow interactions
 ////////////////////////////////////////////////
 
-search.on("render", () => {
-  Webflow.require("ix2").init();
-});
+// search.on("render", () => {
+//   Webflow.require("ix2").init();
+// });
